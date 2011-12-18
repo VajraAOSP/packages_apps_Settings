@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!-- Copyright (C) 2020 VajraAOSP Lusty & Gorgeous Software, Ltd.
      Copyright (C) 2015 Yank555.lu Android Open Source Project
 
@@ -52,6 +51,11 @@
     <string name="display_rotation_90_title">90 degrees</string>
     <string name="display_rotation_180_title">180 degrees</string>
     <string name="display_rotation_270_title">270 degrees</string>
+
+    <!-- Linked / unlinked notification volume -->
+    <string name="link_volume_option_title">Link ring and notification volume</string>
+    <string name="notification_volume_option_title">Notification volume</string>
+    <string name="ring_notification_volume_option_title">Ring and notification volume</string>
 
     <!-- Privacy Settings Header item -->
     <string name="privacy_settings_title">Privacy</string>
