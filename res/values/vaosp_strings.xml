@@ -796,4 +796,8 @@
     <string name="dashboard_tileview_dividers_title">Dashboard dividers</string>
     <string name="dashboard_tileview_dividers_summary">Hide dashboard tile dividers</string>
 
+    <!-- Launch default music player when the headset is connected -->
+    <string name="headset_connect_player_title">Launch music app</string>
+    <string name="headset_connect_player_summary">Launch the default music app when headset is connected</string>
+
 </resources>

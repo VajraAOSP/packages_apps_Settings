@@ -66,6 +66,13 @@
                 android:icon="@drawable/ring_notif_increasing"
                 android:dependency="increasing_ring" />
 
+        <!-- Launch music player when headset is connected -->
+        <com.android.settings.slim.SystemSettingSwitchPreference
+                android:key="headset_connect_player"
+                android:title="@string/headset_connect_player_title"
+                android:summary="@string/headset_connect_player_summary"
+                android:defaultValue="false" />
+
 		<!-- Disable ducking during media playback -->
         <com.android.settings.slim.SystemSettingSwitchPreference
                 android:key="zen_disable_ducking_during_media_playback"

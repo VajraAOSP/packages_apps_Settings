@@ -786,4 +786,8 @@
     <!-- Checkbox title for option to scan always available setting (from AOSP) -->
     <string name="wifi_scan_always_available">Scanning sempre disponibile</string>
 
+    <!-- Launch default music player when the headset is connected -->
+    <string name="headset_connect_player_title">Lancia l\'app Musica</string>
+    <string name="headset_connect_player_summary">Apre l\'app Musica di default quando vengono connesse le cuffie</string>
+
 </resources>
