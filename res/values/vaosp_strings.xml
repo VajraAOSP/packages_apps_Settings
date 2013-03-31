@@ -375,4 +375,7 @@
     <string name="swap_volume_buttons_title">Reorient volume rockers</string>
     <string name="swap_volume_buttons_summary">Swap volume buttons logically according to screen rotation</string>
 
+    <!-- Camera sound switch -->
+    <string name="camera_sounds_title">Camera shutter sound</string>
+
 </resources>
