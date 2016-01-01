@@ -405,6 +405,10 @@
     <string name="advanced_reboot_summary">Include options in the power menu for rebooting into recovery and bootloader</string>
     <string name="advanced_reboot_dialog_title">Advanced reboot menu</string>
     <string name="advanced_reboot_disabled">Disable</string>
+
+    <!-- Unaccounted and overcounted battery stats -->
+    <string name="show_unac_and_overcounted_stats_title">Show unaccounted/overcounted stats</string>
+    <string name="show_unac_and_overcounted_stats_summary">Show unaccounted and overcounted usage in battery statistics.</string>
     <string name="advanced_reboot_hide_on_keyguard">Hide on lock screen</string>
     <string name="advanced_reboot_show_always">Show always</string>
 
