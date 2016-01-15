@@ -49,6 +49,7 @@ public class NavbarSettings extends SettingsPreferenceFragment implements
     private static final String DIM_NAV_BUTTONS_ALPHA = "dim_nav_buttons_alpha";
     private static final String DIM_NAV_BUTTONS_ANIMATE = "dim_nav_buttons_animate";
     private static final String DIM_NAV_BUTTONS_ANIMATE_DURATION = "dim_nav_buttons_animate_duration";
+    private static final String STATUS_BAR_IME_ARROWS = "status_bar_ime_arrows";
 
     private int mNavBarMenuDisplayValue;
 
@@ -65,6 +66,7 @@ public class NavbarSettings extends SettingsPreferenceFragment implements
     SlimSeekBarPreference mDimNavButtonsAlpha;
     SwitchPreference mDimNavButtonsAnimate;
     SlimSeekBarPreference mDimNavButtonsAnimateDuration;
+    SwitchPreference mStatusBarImeArrows;
 
     @Override
     protected int getMetricsCategory() {
@@ -175,6 +177,11 @@ public class NavbarSettings extends SettingsPreferenceFragment implements
             mDimNavButtonsAnimateDuration.setInitValue((animateDuration / 100) - 1);
         }
 
+        mStatusBarImeArrows = (SwitchPreference) findPreference(STATUS_BAR_IME_ARROWS);
+        mStatusBarImeArrows.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_IME_ARROWS, 0) == 1);
+        mStatusBarImeArrows.setOnPreferenceChangeListener(this);
+
         updateNavbarPreferences(enableNavigationBar);
     }
 
@@ -192,6 +199,7 @@ public class NavbarSettings extends SettingsPreferenceFragment implements
         mDimNavButtonsAlpha.setEnabled(show);
         mDimNavButtonsAnimate.setEnabled(show);
         mDimNavButtonsAnimateDuration.setEnabled(show);
+        mStatusBarImeArrows.setEnabled(show);
     }
 
     @Override
@@ -244,6 +252,11 @@ public class NavbarSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getActivity().getContentResolver(),
                 Settings.System.DIM_NAV_BUTTONS_ANIMATE_DURATION,
                 Integer.parseInt((String) newValue));
+            return true;
+        } else if (preference == mStatusBarImeArrows) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.STATUS_BAR_IME_ARROWS,
+                    ((Boolean) newValue) ? 1 : 0);
             return true;
         }
         return false;
