@@ -724,4 +724,8 @@
     <string name="notification_light_missed_call_title">Missed call</string>
     <string name="notification_light_voicemail_title">Voicemail</string>
 
+    <!--Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+    <string name="unlock_quick_unlock_control_summary">Automatically unlock as soon as the correct PIN/password has been entered (pressing OK not required)\nNote: will only work for 4 digit PIN/Password !</string>
+
 </resources>
