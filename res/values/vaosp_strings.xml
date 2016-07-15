@@ -35,6 +35,10 @@
     <!-- Add Superuser menu entry in main dashboard categories -->
     <string name="superuser_settings_title">Superuser</string>
 
+    <!-- Show/Hide Superuser/SuperSU icon icon on statusbar -->
+    <string name="show_su_statusbar_icon_title">SU statusbar icon</string>
+    <string name="show_su_statusbar_icon_summary">Show a SU # icon in statusbar whenever a root session is active</string>
+
     <!-- About device screen, CPU and RAM info. -->
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Memory</string>
