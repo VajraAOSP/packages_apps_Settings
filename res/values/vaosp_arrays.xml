@@ -278,4 +278,9 @@
         <item>@string/clock_date_format_custom</item>
     </string-array>
 
+    <!-- Add Superuser menu entry in main dashboard categories -->
+    <string-array name="app_ops_categories_yaosp_su" translatable="false">
+        <item>@string/app_ops_categories_su</item>
+    </string-array>
+
 </resources>
