@@ -774,4 +774,8 @@
     <string name="volume_steps_voice_call_title">Volume steps: Voice Call</string>
     <string name="volume_steps_reset">Reset</string>
 
+    <!-- Volume rocker wake -->
+    <string name="volbtn_wake_device_title">Volume button wake</string>
+    <string name="volbtn_wake_device_summary">Pressing either volume button will wake your device\nMay not wake device if music control is active and music is playing</string>
+
 </resources>
