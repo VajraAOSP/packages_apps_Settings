@@ -778,4 +778,8 @@
     <string name="volbtn_wake_device_title">Volume button wake</string>
     <string name="volbtn_wake_device_summary">Pressing either volume button will wake your device\nMay not wake device if music control is active and music is playing</string>
 
+    <!-- Lockscreen charging current indicator  -->
+    <string name="lockscreen_charging_current_title">Lockscreen charging current</string>
+    <string name="lockscreen_charging_current_summary">Display negociated charger max current on lockscreen</string>
+
 </resources>
