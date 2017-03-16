@@ -96,9 +96,6 @@
             android:targetClass="com.android.cellbroadcastreceiver.CellBroadcastSettings" />
     </PreferenceScreen>
 
-    <PreferenceCategory
-            android:title="@string/network_traffic_options_title" />
-
     <PreferenceScreen
             android:key="network_traffic_state"
             android:fragment="com.android.settings.NetworkTraffic"
