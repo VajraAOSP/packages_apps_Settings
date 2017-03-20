@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-/*
-**
-** Copyright 2007 The Android Open Source Project
-**
-** Licensed under the Apache License, Version 2.0 (the "License");
-** you may not use this file except in compliance with the License.
-** You may obtain a copy of the License at
-**
-**     http://www.apache.org/licenses/LICENSE-2.0
-**
-** Unless required by applicable law or agreed to in writing, software
-** distributed under the License is distributed on an "AS IS" BASIS,
-** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-** See the License for the specific language governing permissions and
-** limitations under the License.
-*/
+<!-- Copyright 2020 VajraAOSP Lusty & Gorgeous Software, Ltd.
+     Copyright 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
   <string-array name="timezone_filters">
     <item msgid="5296756001147094692">"America"</item>
     <item msgid="3005562397632768392">"Europa"</item>
@@ -111,15 +109,6 @@
     <item msgid="5660739516542454527">"Bloccato"</item>
     <item msgid="1805837518286731242">"Al momento vengono evitate connessioni deboli"</item>
   </string-array>
-    <!-- no translation found for wifi_security:0 (8491993170197127709) -->
-    <!-- no translation found for wifi_security:1 (6524315248437318854) -->
-    <!-- no translation found for wifi_security:2 (1532568756571457140) -->
-    <!-- no translation found for wifi_security:3 (3620707702811709779) -->
-    <!-- no translation found for wifi_security_no_eap:0 (2084555984818107151) -->
-    <!-- no translation found for wifi_security_no_eap:1 (397579322683471524) -->
-    <!-- no translation found for wifi_security_no_eap:2 (1968820975358150484) -->
-    <!-- no translation found for wifi_ap_security:0 (5251664683198623324) -->
-    <!-- no translation found for wifi_ap_security:1 (7989073072260294673) -->
   <string-array name="wifi_eap_method">
     <item msgid="1160193392455075561">"PEAP"</item>
     <item msgid="7981731051382306293">"TLS"</item>
@@ -135,9 +124,6 @@
     <item msgid="3079489731769553856">"TTLS"</item>
     <item msgid="35269224158638258">"PWD"</item>
   </string-array>
-    <!-- no translation found for wifi_ap_band_config_full:0 (1085243288162893079) -->
-    <!-- no translation found for wifi_ap_band_config_full:1 (5531376834915607202) -->
-    <!-- no translation found for wifi_ap_band_config_2G_only:0 (7006771583217001015) -->
   <string-array name="wifi_p2p_wps_setup">
     <item msgid="5085064298144493867">"Pulsante di comando"</item>
     <item msgid="1624323946324499595">"PIN del dispositivo peer"</item>
@@ -566,5 +552,5 @@
     <item msgid="4608643045752965568">"Rosa"</item>
     <item msgid="6131821495505931173">"Rosso"</item>
   </string-array>
-    <!-- no translation found for usb_configuration_titles:0 (292902998500371970) -->
+
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2007 The Android Open Source Project
+<!-- Copyright (C) 2020 VajraAOSP Lusty & Gorgeous Software, Ltd.
+     Copyright (C) 2007 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,6 +17,7 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
     <string name="yes" msgid="4676390750360727396">"Sì"</string>
     <string name="no" msgid="6731231425810196216">"No"</string>
     <string name="create" msgid="3578857613172647409">"Crea"</string>
@@ -851,8 +853,8 @@
     <string name="screensaver_settings_button" msgid="7292214707625717013">"Impostazioni"</string>
     <string name="automatic_brightness" msgid="5014143533884135461">"Luminosità automatica"</string>
     <string name="lift_to_wake_title" msgid="4555378006856277635">"Solleva per riattivare"</string>
-    <string name="doze_title" msgid="2259176504273878294">"Display Ambient"</string>
-    <string name="doze_summary" msgid="7128970177894383698">"Riattiva schermo quando sollevi il dispositivo o ricevi notifiche"</string>
+    <string name="doze_title" msgid="2259176504273878294">"Display Ambientale"</string>
+    <string name="doze_summary" msgid="7128970177894383698">"Riattiva lo schermo quando ricevi notifiche"</string>
     <string name="title_font_size" msgid="4405544325522105222">"Dimensioni carattere"</string>
     <string name="dialog_title_font_size" msgid="2231507851258955038">"Dimensioni carattere"</string>
     <string name="sim_lock_settings" msgid="3392331196873564292">"Impostazioni blocco SIM"</string>
@@ -2561,14 +2563,14 @@
     <string name="manage_notification_access_title" msgid="7510080164564944891">"Accesso alle notifiche"</string>
     <string name="manage_notification_access_summary_zero" msgid="2409912785614953348">"Le app non possono leggere le notifiche"</string>
     <plurals name="manage_notification_access_summary_nonzero" formatted="false" msgid="7930130030691218387">
-      <item quantity="other">Le app %d possono leggere le notifiche</item>
+      <item quantity="other">Queste %d app possono leggere le notifiche</item>
       <item quantity="one">L\'app %d può leggere le notifiche</item>
     </plurals>
     <string name="no_notification_listeners" msgid="3487091564454192821">"Nessuna delle app installate ha richiesto l\'accesso alle notifiche."</string>
     <string name="notification_listener_security_warning_title" msgid="5522924135145843279">"Consentire l\'accesso alle notifiche a <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="548925084229440829">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> sarà in grado di leggere tutte le notifiche, incluse quelle contenenti informazioni personali come i nomi dei contatti e il testo dei messaggi ricevuti. Sarà inoltre in grado di ignorare tali notifiche o di attivare pulsanti di azione al loro interno."</string>
-    <string name="manage_zen_access_title" msgid="2611116122628520522">"Accesso Non disturbare"</string>
-    <string name="zen_access_empty_text" msgid="8772967285742259540">"Nessuna delle app installate ha richiesto l\'accesso Non disturbare"</string>
+    <string name="manage_zen_access_title" msgid="2611116122628520522">"Accesso non disturbare"</string>
+    <string name="zen_access_empty_text" msgid="8772967285742259540">"Nessuna delle app installate ha richiesto l\'accesso non disturbare"</string>
     <string name="loading_notification_apps" msgid="5031818677010335895">"Caricamento app..."</string>
     <string name="app_notification_block_title" msgid="4069351066849087649">"Blocca tutto"</string>
     <string name="app_notification_block_summary" msgid="9049487483231233726">"Non mostrare mai notifiche di questa app"</string>
@@ -2900,4 +2902,5 @@
   </string-array>
     <string name="picture_color_mode" msgid="4560755008730283695">"Modalità colori immagini"</string>
     <string name="picture_color_mode_desc" msgid="1141891467675548590">"Use sRGB"</string>
+
 </resources>
