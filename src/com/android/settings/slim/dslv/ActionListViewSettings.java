@@ -79,15 +79,13 @@ import java.util.ArrayList;
 public class ActionListViewSettings extends ListFragment implements
             ShortcutPickerHelper.OnPickListener {
 
-    private static final int DLG_SHOW_ACTION_DIALOG    = 0;
-    private static final int DLG_SHOW_ICON_PICKER      = 1;
-    private static final int DLG_DELETION_NOT_ALLOWED  = 2;
-    private static final int DLG_SHOW_HELP_SCREEN      = 3;
-    private static final int DLG_RESET_TO_DEFAULT      = 4;
-    private static final int DLG_HOME_REMOVED_DIALOG   = 5;
-    private static final int DLG_BACK_REMOVED_DIALOG   = 6;
-    private static final int DLG_HOME_REASSIGN_DIALOG  = 7;
-    private static final int DLG_BACK_REASSIGN_DIALOG  = 8;
+    private static final int DLG_SHOW_ACTION_DIALOG   = 0;
+    private static final int DLG_SHOW_ICON_PICKER     = 1;
+    private static final int DLG_DELETION_NOT_ALLOWED = 2;
+    private static final int DLG_SHOW_HELP_SCREEN     = 3;
+    private static final int DLG_RESET_TO_DEFAULT     = 4;
+    private static final int DLG_HOME_WARNING_DIALOG  = 5;
+    private static final int DLG_BACK_WARNING_DIALOG  = 6;
 
     private static final int MENU_HELP = Menu.FIRST;
     private static final int MENU_ADD = MENU_HELP + 1;
@@ -160,15 +158,14 @@ public class ActionListViewSettings extends ListFragment implements
                 if (mDisableDeleteLastEntry && mActionConfigs.size() == 0) {
                     mActionConfigsAdapter.add(item);
                     showDialogInner(DLG_DELETION_NOT_ALLOWED, 0, false, false);
-                } else if (!ActionChecker.containsAction(
-                            mActivity, item, ActionConstants.ACTION_BACK)) {
-                    mActionConfigsAdapter.add(item);
-                    showDialogInner(DLG_BACK_REMOVED_DIALOG, 0, false, false);
-                } else if (!ActionChecker.containsAction(
-                        mActivity, item, ActionConstants.ACTION_HOME)) {
-                    mActionConfigsAdapter.add(item);
-                    showDialogInner(DLG_HOME_REMOVED_DIALOG, 0, false, false);
                 } else {
+                    if (!ActionChecker.containsAction(
+                            mActivity, item, ActionConstants.ACTION_BACK)) {
+                        showDialogInner(DLG_BACK_WARNING_DIALOG, 0, false, false);
+                    } else if (!ActionChecker.containsAction(
+                            mActivity, item, ActionConstants.ACTION_HOME)) {
+                        showDialogInner(DLG_HOME_WARNING_DIALOG, 0, false, false);
+                    }
                     setConfig(mActionConfigs, false);
                     deleteIconFileIfPresent(item, true);
                     if (mActionConfigs.size() == 0) {
@@ -244,16 +241,7 @@ public class ActionListViewSettings extends ListFragment implements
                         mPicker.pickShortcut(getId(), true);
                     }
                 } else if (!mUseAppPickerOnly) {
-                    ActionConfig actionConfig = mActionConfigsAdapter.getItem(arg2);
-                    if (ActionConstants.ACTION_HOME.equals(actionConfig.getClickAction())) {
-                        // Do not allow to change normal action on Home
-                        showDialogInner(DLG_HOME_REASSIGN_DIALOG, 0, false, false);
-                    } else if (ActionConstants.ACTION_BACK.equals(actionConfig.getClickAction())) {
-                        // Do not allow to change normal action on Back
-                        showDialogInner(DLG_BACK_REASSIGN_DIALOG, 0, false, false);
-                    } else {
-                        showDialogInner(DLG_SHOW_ACTION_DIALOG, arg2, false, false);
-                    }
+                    showDialogInner(DLG_SHOW_ACTION_DIALOG, arg2, false, false);
                 } else {
                     if (mPicker != null) {
                         mPendingIndex = arg2;
@@ -261,6 +249,13 @@ public class ActionListViewSettings extends ListFragment implements
                         mPendingNewAction = false;
                         mPicker.pickShortcut(getId());
                     }
+                }
+                if (!ActionChecker.containsAction(mActivity, mActionConfigs.get(arg2),
+                        ActionConstants.ACTION_BACK)) {
+                    showDialogInner(DLG_BACK_WARNING_DIALOG, 0, false, false);
+                } else if (!ActionChecker.containsAction(
+                        mActivity, mActionConfigs.get(arg2), ActionConstants.ACTION_HOME)) {
+                    showDialogInner(DLG_HOME_WARNING_DIALOG, 0, false, false);
                 }
             }
         });
@@ -278,13 +273,7 @@ public class ActionListViewSettings extends ListFragment implements
                             mPicker.pickShortcut(getId(), true);
                         }
                     } else if (!mUseAppPickerOnly) {
-                        ActionConfig actionConfig = mActionConfigsAdapter.getItem(arg2);
-                        if (ActionConstants.ACTION_HOME.equals(actionConfig.getClickAction())) {
-                            // Do not allow to change longpress action on Home
-                            showDialogInner(DLG_HOME_REASSIGN_DIALOG, 0, false, false);
-                        } else {
-                            showDialogInner(DLG_SHOW_ACTION_DIALOG, arg2, true, false);
-                        }
+                        showDialogInner(DLG_SHOW_ACTION_DIALOG, arg2, true, false);
                     } else {
                         if (mPicker != null) {
                             mPendingIndex = arg2;
@@ -952,19 +941,13 @@ public class ActionListViewSettings extends ListFragment implements
                         }
                     })
                     .create();
-                case DLG_HOME_REMOVED_DIALOG:
-                case DLG_BACK_REMOVED_DIALOG:
-                case DLG_HOME_REASSIGN_DIALOG:
-                case DLG_BACK_REASSIGN_DIALOG:
+                case DLG_HOME_WARNING_DIALOG:
+                case DLG_BACK_WARNING_DIALOG:
                     int msg;
-                    if (id == DLG_HOME_REMOVED_DIALOG) {
-                        msg = R.string.remove_home_key;
-                    } else if (id == DLG_BACK_REMOVED_DIALOG) {
-                        msg = R.string.remove_back_key;
-                    } else if (id == DLG_HOME_REASSIGN_DIALOG) {
-                        msg = R.string.reassign_home_key;
+                    if (id == DLG_HOME_WARNING_DIALOG) {
+                        msg = R.string.no_home_key;
                     } else {
-                        msg = R.string.reassign_back_key;
+                        msg = R.string.no_back_key;
                     }
                     return new AlertDialog.Builder(getActivity())
                     .setTitle(R.string.attention)
