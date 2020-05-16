@@ -66,7 +66,7 @@
     <string name="display_rotation_title">Rotazione</string>
     <string name="display_rotation_disabled">Disabilitata</string>
     <string name="display_rotation_unit">gradi</string>
-    <string name="display_lockscreen_rotation_title">Ruota la schermata di blocco</string>
+    <string name="display_lockscreen_rotation_title">Ruota anche la schermata di blocco</string>
     <string name="display_rotation_category_title">Modi di rotazione</string>
     <string name="display_rotation_0_title">0 gradi</string>
     <string name="display_rotation_90_title">90 gradi</string>
@@ -375,7 +375,7 @@
     <!-- Global menu actions -->
     <string name="power_menu_category_title">Menu spegnimento</string>
     <string name="power_menu_title">Opzioni menu</string>
-    <string name="power_menu_summary">Configura le opzioni da mostrare nel menu (fino a sei)</string>
+    <string name="power_menu_summary">Configura le opzioni da mostrare nel menu</string>
     <string name="shortcut_action_airplane">Modo aereoplano</string>
     <string name="shortcut_action_power_off">Spegni</string>
     <string name="shortcut_action_reboot">Reboot</string>
@@ -384,7 +384,7 @@
     <string name="shortcut_action_lockdown">Schermo di blocco</string>
 
     <!-- Advanced reboot options -->
-    <string name="advanced_reboot_title">Opzioni reboot (recovery / bootloader)</string>
+    <string name="advanced_reboot_title">Opzioni reboot (recovery/bootloader)</string>
     <string name="advanced_reboot_summary">Provvede il reboot nella recovery o nel bootloader quando si seleziona reboot</string>
     <string name="advanced_reboot_dialog_title">Menu reboot avanzato</string>
     <string name="advanced_reboot_disabled">Non mostrare mai</string>
